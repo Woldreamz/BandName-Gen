@@ -1,0 +1,60 @@
+.carousel-container {
+    width: 500px; /* Adjust width as needed */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex; /* Allow items to sit side-by-side */
+    transition: transform 0.4s ease-in-out; 
+}
+
+.carousel-slide img {
+    width: 100%;     /* Make the image take up the full width of its container */
+    height: auto;    /* Automatically adjust height to maintain proportions */
+    object-fit: cover;  /* Cover the container while keeping aspect ratio */
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* ... (rest of your CSS) */
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-indicators .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc; 
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+    background-color: #777;  
+}
